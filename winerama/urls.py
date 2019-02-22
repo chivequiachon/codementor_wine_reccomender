@@ -18,6 +18,8 @@ from django.urls import path
 from django.conf.urls import url, include
 
 urlpatterns = [
-    url(r'^reviews/', include('reviews.urls')),
+    url(r'^reviews/', include(('reviews.urls', 'reviews'), namespace="reviews")),
     path('admin/', admin.site.urls),
+    url(r'^accounts/', include('registration.backends.simple.urls')),
+    url(r'^accounts/', include(('django.contrib.auth.urls', 'auth'), namespace="auth")),
 ]
