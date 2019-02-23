@@ -13,7 +13,7 @@ requests = "*"
 numpy = "*"
 pandas = "*"
 scikit-learn = "*"
-django-bootstrap3" = "*"
+django-bootstrap3 = "*"
 django-registration-redux = "*"
 
 
